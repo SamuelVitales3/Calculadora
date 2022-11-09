@@ -1,4 +1,7 @@
-import controlador.MockMenu;
+// IMPORT COMPONENTS OF PROJECT
+import main.controller.MockMenu;
+import main.view.Menu;
+
 import junit.framework.TestCase;
 import org.junit.Before;
 import org.junit.Test;
@@ -7,13 +10,12 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 import static org.mockito.Mockito.*;
-import view.Menu;
 
 @RunWith(MockitoJUnitRunner.class)
 public class MenuTest extends TestCase {
     @InjectMocks
     Menu s = new Menu();
-    @Mock //Declarem un objecte mock
+    @Mock // Declarem un objecte mock
     MockMenu mM;
     @Before
     public void init(){ //Modifiquem els comportaments als que nosaltres volem
