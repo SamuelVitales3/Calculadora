@@ -24,7 +24,7 @@ public class SumTest extends TestCase {
         Sum x = new Sum();
         assertEquals(0.0f, x.getValor1());
         assertEquals(0.0f, x.getValor2());
-        assertEquals(0.0f, x.getResultado());
+        assertEquals(0.0f, x.getResult());
     }
     @Test
     public void testConstructorSuma() {

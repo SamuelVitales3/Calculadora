@@ -1,7 +1,5 @@
-// IMPORT COMPONENTS OF PROJECT
 import main.controller.MockMain;
 import main.view.Main;
-
 import junit.framework.TestCase;
 import org.junit.Before;
 import org.junit.Test;
@@ -18,11 +16,11 @@ public class MainTest extends TestCase {
     @Mock // Declarem un objecte mock
     MockMain mM;
     @Before
-    public void init(){ //Modifiquem els comportaments als que nosaltres volem
+    public void init() { // Modifiquem els comportaments als que nosaltres volem
         when(mM.setEntradaTec(1)).thenReturn("Suma");
         when(mM.setEntradaValor1(1)).thenReturn(1.0f);
         when(mM.setEntradaValor2(2)).thenReturn(2.0f);
-        when(mM.resultadoFinal("Suma",1.0f,2.0f)).thenReturn(3.0f);
+        when(mM.finalResult("Suma",1.0f,2.0f)).thenReturn(3.0f);
     }
     @Test
     public void mockEntradaTeclado() {
