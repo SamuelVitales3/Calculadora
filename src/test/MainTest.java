@@ -1,6 +1,6 @@
 // IMPORT COMPONENTS OF PROJECT
-import main.controller.MockMenu;
-import main.view.Menu;
+import main.controller.MockMain;
+import main.view.Main;
 
 import junit.framework.TestCase;
 import org.junit.Before;
@@ -12,11 +12,11 @@ import org.mockito.runners.MockitoJUnitRunner;
 import static org.mockito.Mockito.*;
 
 @RunWith(MockitoJUnitRunner.class)
-public class MenuTest extends TestCase {
+public class MainTest extends TestCase {
     @InjectMocks
-    Menu s = new Menu();
+    Main s = new Main();
     @Mock // Declarem un objecte mock
-    MockMenu mM;
+    MockMain mM;
     @Before
     public void init(){ //Modifiquem els comportaments als que nosaltres volem
         when(mM.setEntradaTec(1)).thenReturn("Suma");

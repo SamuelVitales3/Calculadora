@@ -1,16 +1,15 @@
-package main.view.;
-import main.controller.MockMenu;
-import main.model.*;
+package main.view;
+import main.controller.MockMain;
 
 import java.util.Scanner;
 
-public class Menu {
+public class Main {
     static int entradaTecladoOp;
-    MockMenu mockM;
+    MockMain mockM;
     static float valor1;
     static float valor2;
 
-    public Menu() {
+    public Main() {
         entradaTecladoOp = 0;
         valor1 = 0;
         valor2 = 0;
