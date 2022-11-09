@@ -10,14 +10,14 @@ import org.mockito.runners.MockitoJUnitRunner;
 import static org.mockito.Mockito.*;
 
 @RunWith(MockitoJUnitRunner.class)
-public class SumaTest extends TestCase {
-    @InjectMocks //Injectem els mocks creats a la linia d'abaix i els injectem al objecte que volem simular
+public class SumTest extends TestCase {
+    @InjectMocks // Injectem els mocks creats a la línia de sota i els injectem a l'objecte que volem simular
     Sum s = new Sum();
-    @Mock //creació del mock object
+    @Mock // Creació del mock object
     MockSum sM;
-    @Before //Modifiquem els comportaments als que nosaltres volem
+    @Before // Modifiquem els comportaments als quals nosaltres volem
     public void init(){
-        when(sM.sumaAuxiliar(5.0f,5.0f)).thenReturn(10.0f);
+        when(sM.auxiliarSum(5.0f,5.0f)).thenReturn(10.0f);
     }
     @Test
     public void testConstructorDefecto() {

@@ -1,5 +1,4 @@
 package main.controller;
-
 public interface MockMain {
     public String setEntradaTec(int x);
     public float setEntradaValor1(float v1);
