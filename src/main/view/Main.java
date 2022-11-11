@@ -1,5 +1,7 @@
 package main.view;
 import main.controller.MockMain;
+import main.model.Minus;
+import main.model.Sum;
 
 import java.util.Scanner;
 
@@ -118,33 +120,33 @@ public class Main {
             if((entradaTecladoOp > 0) && (entradaTecladoOp <= 5)) {
                 System.out.println("Introduce el primer valor de la operacion: \n");
                 Scanner valor1Scan = new Scanner(System.in);
-                float auxvalor1 = valor1Scan.nextFloat();
-                setValor1(auxvalor1);
+                float auxValor = valor1Scan.nextFloat();
+                setValor1(auxValor);
 
                 System.out.println("Introduce el segundo valor de la operacion: \n");
                 Scanner valor2Scan = new Scanner(System.in);
-                float auxvalor2 = valor2Scan.nextFloat();
-                setValor2(auxvalor2);
+                float auxValor2 = valor2Scan.nextFloat();
+                setValor2(auxValor2);
             }
             else { //Determina si l'operació seleccionada requereix d'un valor
                 if ((entradaTecladoOp > 5) && (entradaTecladoOp <= 10)) {
                     System.out.println("Introduce el valor de la operacion: \n");
                     Scanner valor1Scan = new Scanner(System.in);
-                    float auxvalor1 = valor1Scan.nextFloat();
-                    setValor1(auxvalor1);
+                    float auxValor1 = valor1Scan.nextFloat();
+                    setValor1(auxValor1);
                 }
             }
             switch(entradaTecladoOp) { //Depenent de la operació seleccionada, fem la operació corresponent amb els valors/el valor introduït per l'usuari
                 case 1:
-                    Suma opSuma = new Suma(valor1, valor2);
-                    opSuma.suma();
-                    resultatOp = opSuma.getResultado();
+                    Sum opSuma = new Sum(valor1, valor2);
+                    opSuma.sum();
+                    resultatOp = opSuma.getResult();
                     break;
 
                 case 2:
-                    Resta opResta= new Resta(valor1, valor2);
-                    opResta.resta();
-                    resultatOp = opResta.getResultado();
+                    Minus opMinus = new Minus(valor1, valor2);
+                    opMinus.minus();
+                    resultatOp = opMinus.getResultado();
                     break;
 
                 case 3:

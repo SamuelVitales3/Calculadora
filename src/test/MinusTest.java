@@ -1,5 +1,6 @@
 import junit.framework.TestCase;
 import org.junit.Test;
+import main.model.Minus;
 
 public class MinusTest extends TestCase
 {
