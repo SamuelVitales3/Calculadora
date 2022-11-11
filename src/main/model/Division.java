@@ -14,13 +14,11 @@ public class Division extends AritmeticOperation{
     }
 
     public double division(){
-        double x = 1.0;
-        if (valor1 == 0.0 || valor2 == 0.0){
-            return x; //Syntax error
-        } else if (valor1 == 0.0 && valor2 == 0.0) {
-            return 0.0;
+        if ((valor1 != 0 && valor2 == 0.0) || (valor1 == 0 && valor2 == 0)
+                || (valor1 == 1 && valor2 == 0)) {
+            throw new IllegalArgumentException("We couldn't do this operation");
         } else {
-            return valor1/valor2;
+            return valor1 / valor2;
         }
     }
 }
