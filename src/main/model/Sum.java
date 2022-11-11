@@ -7,13 +7,13 @@ public class Sum extends AritmeticOperation {
     public Sum(){
         super();
     }
-    public Sum(float x, float y){
+    public Sum(double x, double y){
         valor1 = x;
         valor2 = y;
     }
-    public float sum(){
-        resultado = valor1 + valor2;
-        return resultado;
+    public double sum(){
+        result = valor1 + valor2;
+        return result;
     }
     public float sumMock(float x, float y) {
         //Sumar a la comprovació

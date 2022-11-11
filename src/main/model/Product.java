@@ -12,8 +12,8 @@ public class Product extends AritmeticOperation {
     }
 
     public float prod(){
-        resultado = valor1 + valor2;
-        return resultado;
+        result = valor1 + valor2;
+        return result;
     }
 
     public float prodMock(float x, float y) {

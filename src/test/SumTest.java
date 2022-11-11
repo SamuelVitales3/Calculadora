@@ -11,46 +11,48 @@ import static org.mockito.Mockito.*;
 
 @RunWith(MockitoJUnitRunner.class)
 public class SumTest extends TestCase {
-    @InjectMocks // Injectem els mocks creats a la línia de sota i els injectem a l'objecte que volem simular
+    @InjectMocks
     Sum s = new Sum();
-    @Mock // Creació del mock object
+    @Mock
     MockSum sM;
-    @Before // Modifiquem els comportaments als quals nosaltres volem
+    @Before
     public void init(){
-        when(sM.auxiliarSum(5.0f,5.0f)).thenReturn(10.0f);
+        when(sM.auxiliarSum(5.0,5.0)).thenReturn(10.0);
     }
     @Test
     public void testConstructorDefecto() {
         Sum x = new Sum();
-        assertEquals(0.0f, x.getValor1());
-        assertEquals(0.0f, x.getValor2());
-        assertEquals(0.0f, x.getResult());
+        assertEquals(0.0, x.getValor1());
+        assertEquals(0.0, x.getValor2());
+        assertEquals(0.0, x.getResult());
     }
     @Test
-    public void testConstructorSuma() {
-        Sum opAritmetica = new Sum(5.0f, 3.0f);
-        assertEquals(5.0f,opAritmetica.getValor1());
-        assertEquals(3.0f,opAritmetica.getValor2());
-    }
-    //Test interior
-    @Test
-    public void testSuma() {
-        Sum opAritmetica = new Sum(5,3);
-        float resultatFuncio = opAritmetica.sum();
-        float resultatExpected = 8;
-        assertEquals(resultatExpected, resultatFuncio);
-    }
-    //Test interior
-    @Test
-    public void testSumaNegativo() {
-        Sum opAritmetica = new Sum(5,-8);
-        float resultatFuncio = opAritmetica.sum();
-        float resultatExpected = -3;
-        assertEquals(resultatExpected, resultatFuncio);
+    public void testSumConstructor() {
+        Sum opArithmetic = new Sum(5.0, 3.0);
+        assertEquals(5.0, opArithmetic.getValor1());
+        assertEquals(3.0, opArithmetic.getValor2());
     }
     @Test
-    public void testSumarMock(){
-        float resultado = s.sumMock(5,5);
-        assertEquals(10.0f,resultado);
+    public void testSum() {
+        Sum opArithmetic = new Sum(5,3);
+        double resultFunction = opArithmetic.sum();
+        assertEquals(8, resultFunction);
+    }
+    @Test
+    public void testNegativeSum() {
+        Sum opArithmetic = new Sum(5,-8);
+        double resultFunction = opArithmetic.sum();
+        assertEquals(-3, resultFunction);
+    }
+    @Test
+    public void testSumWithNegativeDoubleNumbers() {
+        Sum opArithmetic = new Sum(-10.9999, -20.78528);
+        double resultFunction = opArithmetic.sum();
+        assertEquals(-31.78518, resultFunction);
+    }
+    @Test
+    public void testSumMock() {
+        float result = s.sumMock(5,5);
+        assertEquals(10.0, result);
     }
 }
