@@ -36,13 +36,13 @@ public class SumTest extends TestCase {
     public void testSum() {
         Sum opArithmetic = new Sum(5,3);
         double resultFunction = opArithmetic.sum();
-        assertEquals(8, resultFunction);
+        assertEquals(8.0, resultFunction);
     }
     @Test
     public void testNegativeSum() {
         Sum opArithmetic = new Sum(5,-8);
         double resultFunction = opArithmetic.sum();
-        assertEquals(-3, resultFunction);
+        assertEquals(-3.0, resultFunction);
     }
     @Test
     public void testSumWithNegativeDoubleNumbers() {
