@@ -1,6 +1,6 @@
 # CALCULADORA IMPLEMENTADA CON TDD
 
-El objetivo de esta práctica es realizar una simple calculadora en lenguaje JAVA, utilizando el mètodo de desarrollo testing.
+Nuestro objetivo es desarrollar una calculadora que contenga muchas funciones diferentes para dos valores y una para un valor. Desarrollaremos las pruebas necesarias para comprobar que las funciones se crean correctamente y que, por tanto, la calculadora se puede utilizar de forma eficiente y correcta.
 
 ## Participantes del grupo:
 
