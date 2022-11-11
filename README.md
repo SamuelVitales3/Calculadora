@@ -2,7 +2,7 @@
 
 El objetivo de esta práctica es realizar una simple calculadora en lenguaje JAVA, utilizando el mètodo de desarrollo testing.
 
-##Participantes del grupo:
+## Participantes del grupo:
 
 |Nom|Cognom|Niu|E-mail|
 |----|-----|----|-----|
