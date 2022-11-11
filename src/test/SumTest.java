@@ -52,7 +52,7 @@ public class SumTest extends TestCase {
     }
     @Test
     public void testSumMock() {
-        float result = s.sumMock(5,5);
+        double result = s.sumMock(5,5);
         assertEquals(10.0, result);
     }
 }

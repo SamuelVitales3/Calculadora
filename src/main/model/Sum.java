@@ -15,7 +15,7 @@ public class Sum extends AritmeticOperation {
         result = valor1 + valor2;
         return result;
     }
-    public float sumMock(float x, float y) {
+    public double sumMock(float x, float y) {
         //Sumar a la comprovació
         return mockS.auxiliarSum(x,y);
     }
