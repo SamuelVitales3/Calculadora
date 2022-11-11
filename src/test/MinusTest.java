@@ -23,4 +23,11 @@ public class MinusTest extends TestCase
         double resultFunction = opArithmetic.minus();
         assertEquals(8.0,resultFunction);
     }
+
+    @Test
+    public void Negative_NegativeMinusTest() {
+        Minus opArtimetic = new Minus(-5.0, -3.0);
+        assertEquals(-2.0, opArtimetic.minus());
+    }
+
 }
