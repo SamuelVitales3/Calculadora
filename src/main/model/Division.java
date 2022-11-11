@@ -1,11 +1,9 @@
 package main.model;
 import main.controller.MockProduct;
-import main.controller.MockSum;
 import main.controller.AritmeticOperation;
 
 public class Division extends AritmeticOperation{
     MockProduct mockD;
-
     public Division(){ super();}
 
     public Division(double x, double y){

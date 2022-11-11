@@ -10,7 +10,7 @@ import org.mockito.runners.MockitoJUnitRunner;
 import static org.mockito.Mockito.*;
 
 @RunWith(MockitoJUnitRunner.class)
-public class SumTest extends TestCase {
+public class PlusTest extends TestCase {
     @InjectMocks
     Sum s = new Sum();
     @Mock

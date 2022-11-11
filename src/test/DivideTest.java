@@ -3,7 +3,7 @@ import main.model.Division;
 import org.junit.Test;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-public class DivisionTest extends TestCase {
+public class DivideTest extends TestCase {
     @Test
     public void testConstructorDefect(){
         Division d = new Division();
