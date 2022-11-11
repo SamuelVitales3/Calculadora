@@ -6,8 +6,8 @@ public class PowTest extends TestCase
 {
     @Test
     public void constructorTest() {
-        Pow pow = new Pow(8.0,27.0);
-        assertEquals(8.0, pow.getValor1());
+        Pow pow = new Pow(9.0,27.0);
+        assertEquals(9.0, pow.getValor1());
         assertEquals(27.0, pow.getValor2());
     }
     public void testConstructorDefecto() {
