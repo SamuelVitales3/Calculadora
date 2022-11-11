@@ -1,5 +1,6 @@
+package test;
 import main.controller.MockSum;
-import main.model.Sum;
+import main.model.Plus;
 import junit.framework.TestCase;
 import org.junit.Before;
 import org.junit.Test;
@@ -12,7 +13,7 @@ import static org.mockito.Mockito.*;
 @RunWith(MockitoJUnitRunner.class)
 public class PlusTest extends TestCase {
     @InjectMocks
-    Sum s = new Sum();
+    Plus s = new Plus();
     @Mock
     MockSum sM;
     @Before
@@ -21,38 +22,38 @@ public class PlusTest extends TestCase {
     }
     @Test
     public void testConstructorDefecto() {
-        Sum x = new Sum();
+        Plus x = new Plus();
         assertEquals(0.0, x.getValor1());
         assertEquals(0.0, x.getValor2());
         assertEquals(0.0, x.getResult());
     }
     @Test
     public void testSumConstructor() {
-        Sum opArithmetic = new Sum(5.0, 3.0);
+        Plus opArithmetic = new Plus(5.0, 3.0);
         assertEquals(5.0, opArithmetic.getValor1());
         assertEquals(3.0, opArithmetic.getValor2());
     }
     @Test
     public void testSum() {
-        Sum opArithmetic = new Sum(5,3);
-        double resultFunction = opArithmetic.sum();
+        Plus opArithmetic = new Plus(5,3);
+        double resultFunction = opArithmetic.plus();
         assertEquals(8.0, resultFunction);
     }
     @Test
     public void testNegativeSum() {
-        Sum opArithmetic = new Sum(5,-8);
-        double resultFunction = opArithmetic.sum();
+        Plus opArithmetic = new Plus(5,-8);
+        double resultFunction = opArithmetic.plus();
         assertEquals(-3.0, resultFunction);
     }
     @Test
     public void testSumWithNegativeDoubleNumbers() {
-        Sum opArithmetic = new Sum(-10.9999, -20.78528);
-        double resultFunction = opArithmetic.sum();
+        Plus opArithmetic = new Plus(-10.9999, -20.78528);
+        double resultFunction = opArithmetic.plus();
         assertEquals(-31.78518, resultFunction);
     }
     @Test
     public void testSumMock() {
-        double result = s.sumMock(5,5);
+        double result = s.plusMock(5,5);
         assertEquals(10.0, result);
     }
 }

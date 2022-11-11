@@ -1,3 +1,5 @@
+package test;
+
 import junit.framework.TestCase;
 import org.junit.Test;
 import main.model.Minus;

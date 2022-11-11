@@ -2,20 +2,20 @@ package main.model;
 import main.controller.MockSum;
 import main.controller.AritmeticOperation;
 
-public class Sum extends AritmeticOperation {
+public class Plus extends AritmeticOperation {
     MockSum mockS;
-    public Sum(){
+    public Plus(){
         super();
     }
-    public Sum(double x, double y){
+    public Plus(double x, double y){
         valor1 = x;
         valor2 = y;
     }
-    public double sum(){
+    public double plus(){
         result = valor1 + valor2;
         return result;
     }
-    public double sumMock(float x, float y) {
+    public double plusMock(float x, float y) {
         //Sumar a la comprovació
         return mockS.auxiliarSum(x,y);
     }

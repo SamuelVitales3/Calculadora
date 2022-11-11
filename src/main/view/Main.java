@@ -1,7 +1,8 @@
 package main.view;
 import main.controller.MockMain;
 import main.model.Minus;
-import main.model.Sum;
+import main.model.Plus;
+import main.model.Product;
 
 import java.util.Scanner;
 
@@ -16,8 +17,6 @@ public class Main {
         valor1 = 0;
         valor2 = 0;
     }
-
-
     //Funciones para el mock
     public String setEntradaTecladoOp(int x) {
         return mockM.setEntradaTec(x);
@@ -32,7 +31,7 @@ public class Main {
     }
 
     public float resultadoFinal(String entTec, float v1, float v2) {
-        return mockM.resultadoFinal(entTec, v1, v2);
+        return mockM.finalResult(entTec, v1, v2);
     }
 
     public static void setEntradaTecladoOp1(int x) {
@@ -136,27 +135,27 @@ public class Main {
                     setValor1(auxValor1);
                 }
             }
-            switch(entradaTecladoOp) { //Depenent de la operació seleccionada, fem la operació corresponent amb els valors/el valor introduït per l'usuari
+            switch(entradaTecladoOp) {
                 case 1:
-                    Sum opSuma = new Sum(valor1, valor2);
-                    opSuma.sum();
+                    Plus opSuma = new Plus(valor1, valor2);
+                    opSuma.plus();
                     resultatOp = opSuma.getResult();
                     break;
 
                 case 2:
                     Minus opMinus = new Minus(valor1, valor2);
                     opMinus.minus();
-                    resultatOp = opMinus.getResultado();
+                    resultatOp = opMinus.getResult();
                     break;
 
                 case 3:
-                    Multiplicacion opMultiplicacion = new Multiplicacion(valor1, valor2);
-                    opMultiplicacion.multiplicacion();
-                    resultatOp = opMultiplicacion.getResultado();
+                    Product opMultiplicacion = new Product(valor1, valor2);
+                    opMultiplicacion.prod();
+                    resultatOp = opMultiplicacion.getResult();
                     break;
 
                 case 4:
-                    Division opDivision = new Division(valor1, valor2);
+                    Divide opDivision = new Division(valor1, valor2);
                     opDivision.division();
                     resultatOp = opDivision.getResultado();
                     break;

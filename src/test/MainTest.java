@@ -1,3 +1,5 @@
+package test;
+
 import main.controller.MockMain;
 import main.view.Main;
 import junit.framework.TestCase;
