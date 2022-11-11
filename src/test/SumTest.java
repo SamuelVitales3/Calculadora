@@ -17,7 +17,7 @@ public class SumTest extends TestCase {
     MockSum sM;
     @Before
     public void init(){
-        when(sM.auxiliarSum(5.0,5.0)).thenReturn(10.0);
+        when(sM.auxiliarSum(5.0, 5.0)).thenReturn(10.0);
     }
     @Test
     public void testConstructorDefecto() {
