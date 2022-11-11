@@ -1,7 +1,7 @@
 package test;
 import junit.framework.TestCase;
 import main.model.Divide;
-import org.testng.annotations.Test;
+import org.junit.Test;
 import static org.junit.Assert.assertThrows;
 
 public class DivideTest extends TestCase {
