@@ -1,16 +1,14 @@
 package main.view;
 import main.controller.MockMain;
-import main.model.Minus;
-import main.model.Plus;
-import main.model.Product;
-import main.model.Divide;
+import main.model.*;
+
 import java.util.Scanner;
 
 public class Main {
     static int entradaTecladoOp;
     MockMain mockM;
-    static float valor1;
-    static float valor2;
+    static double valor1;
+    static double valor2;
 
     public Main() {
         entradaTecladoOp = 0;
@@ -38,7 +36,6 @@ public class Main {
         entradaTecladoOp = x;
     }
 
-
     //Funciones para mi main
     public static void setValor1(float v1) { valor1 = v1;}
 
@@ -50,17 +47,15 @@ public class Main {
         String[] actual = new String[0];
         //Print Menú
         System.out.println("        Calculadora     \n ");
-        System.out.println("Introduzca la operación a realizar:");
-        System.out.println("1 - Suma");
-        System.out.println("2 - Resta");
-        System.out.println("3 - Multiplicación");
-        System.out.println("4 - División");
-        System.out.println("5 - Potencia");
-        System.out.println("6 - Logaritmo");
-        System.out.println("7 - Exponencial");
-        System.out.println("8 - Sinus");
-        System.out.println("9 - Cosinus");
-        System.out.println("10 - Tangente\n");
+        System.out.println("Introduce the operetation that you want to do:");
+        System.out.println("1 - Plus");
+        System.out.println("2 - Minus");
+        System.out.println("3 - Product");
+        System.out.println("4 - Division");
+        System.out.println("5 - Pow");
+        System.out.println("6 - Sinus");
+        System.out.println("7 - Cosinus");
+        System.out.println("8 - Tangent\n");
         int seleccion = 0;
         String operacion = "";
         String continuar = "";
@@ -71,7 +66,7 @@ public class Main {
         // Comprovem que s'ha introduït un valor correcte
         while ((entradaTecladoOp > 10) || (entradaTecladoOp < 1))
         {
-            System.out.println("Error: Introduzca un numero entre el 1-10");
+            System.out.println("Error: Introduce a number between 1 and 10");
             Scanner entradaEscaner2 = new Scanner(System.in);
             seleccion = entradaEscaner2.nextInt();
         }
@@ -79,32 +74,30 @@ public class Main {
         setEntradaTecladoOp1(seleccion);
         //Definim l'operació escollida per l'usuari
         switch (entradaTecladoOp) {
-            case 1 : operacion =  "Suma";
-            case 2 : operacion = "Resta";
-            case 3 : operacion = "Multiplicación";
-            case 4 : operacion = "División";
-            case 5 : operacion =  "Potencia";
-            case 6 : operacion =  "Logaritmo";
-            case 7 : operacion =  "Exponencial";
-            case 8 : operacion =  "Sinus";
-            case 9 : operacion =  "Cosinus";
-            case 10 : operacion = "Tangente";
-            default : operacion =  "Error: No ha introducido un valor correcto";
+            case 1 : operacion =  "Plus";
+            case 2 : operacion = "Minus";
+            case 3 : operacion = "Product";
+            case 4 : operacion = "Division";
+            case 5 : operacion =  "Pow";
+            case 6 : operacion =  "Sinus";
+            case 7 : operacion =  "Cosinus";
+            case 8 : operacion = "Tangent";
+            default : operacion =  "Error: Don't introduce a valid number";
         };
-        System.out.println("Ha seleccionado: " + entradaTecladoOp + " - " + operacion + "\n");
+        System.out.println("Has selected: " + entradaTecladoOp + " - " + operacion + "\n");
         //Print per canviar el tipus d'operació
-        System.out.println("Desea cambiar el tipo de operación? S/N \n");
+        System.out.println("Do you want to change the operation? Y/N \n");
         Scanner entradaEscaner3 = new Scanner(System.in);
         continuar = entradaEscaner3.nextLine();
         //Variables per comprobar si desitja canviar d'operació (s/S, n/N)
         boolean c1, c2, c3, c4;
-        c1 = continuar.equals("S");
-        c2 = continuar.equals("s");
+        c1 = continuar.equals("Y");
+        c2 = continuar.equals("y");
         c3 = continuar.equals("N");
         c4 = continuar.equals("n");
         while (!c1  && !c2 && !c3 && !c4) {
-            System.out.println("Error: No ha introducido un valor correcto \n");
-            System.out.println("Desea cambiar el tipo de operación? S/N \n");
+            System.out.println("Error: Don't introduce valid answer \n");
+            System.out.println("Do you want to change the operation? S/N \n");
             Scanner entradaEscaner4 = new Scanner(System.in);
             continuar = entradaEscaner4.nextLine();
             c1 = continuar.equals("S"); c2 = continuar.equals("s"); c3 = continuar.equals("N"); c4 = continuar.equals("n");
@@ -117,19 +110,19 @@ public class Main {
         } //En cas d'haver premut n/N, continuem amb l'execució
         else {
             if((entradaTecladoOp > 0) && (entradaTecladoOp <= 5)) {
-                System.out.println("Introduce el primer valor de la operacion: \n");
+                System.out.println("Introduce the first number of operation: \n");
                 Scanner valor1Scan = new Scanner(System.in);
                 float auxValor = valor1Scan.nextFloat();
                 setValor1(auxValor);
 
-                System.out.println("Introduce el segundo valor de la operacion: \n");
+                System.out.println("Introduce the second number of operation: \n");
                 Scanner valor2Scan = new Scanner(System.in);
                 float auxValor2 = valor2Scan.nextFloat();
                 setValor2(auxValor2);
             }
             else { //Determina si l'operació seleccionada requereix d'un valor
                 if ((entradaTecladoOp > 5) && (entradaTecladoOp <= 10)) {
-                    System.out.println("Introduce el valor de la operacion: \n");
+                    System.out.println("Introduce the number of operation: \n");
                     Scanner valor1Scan = new Scanner(System.in);
                     float auxValor1 = valor1Scan.nextFloat();
                     setValor1(auxValor1);
@@ -154,76 +147,60 @@ public class Main {
                     resultatOp = opMultiplicacion.getResult();
                     break;
 
-                /*case 4:
-                    Divide opDivision = new Division(valor1, valor2);
-                    opDivision.division();
-                    resultatOp = opDivision.getResultado();
+                case 4:
+                    Divide opDivision = new Divide(valor1, valor2);
+                    opDivision.divide();
+                    resultatOp = opDivision.getResult();
                     break;
 
                 case 5:
-                    Potencia opPotencia = new Potencia(valor1, valor2);
-                    opPotencia.potencia();
-                    resultatOp = opPotencia.getResultado();
+                    Pow opPotencia = new Pow(valor1, valor2);
+                    opPotencia.pow();
+                    resultatOp = opPotencia.getResult();
                     break;
-
-                case 6:
-                    Logaritmo opLogaritmo = new Logaritmo(valor1);
-                    opLogaritmo.logaritmo();
-                    resultatOp = opLogaritmo.getResultadoLog();
-                    break;
-
-                case 7:
-                    Exponente opExponencial = new Exponente(valor1);
-                    opExponencial.exponente();
-                    resultatOp = opExponencial.getResultado();
-                    break;
-
                 case 8:
                     Sinus opSinus = new Sinus(valor1);
                     opSinus.sinus();
-                    resultatOp = opSinus.getResultadoSinus();
+                    resultatOp = opSinus.getResult();
                     break;
-
                 case 9:
                     Cosinus opCosinus = new Cosinus(valor1);
                     opCosinus.cosinus();
-                    resultatOp = opCosinus.getResultadoCosinus();
+                    resultatOp = opCosinus.getResult();
                     break;
-
                 case 10:
-                    Tangente opTangente = new Tangente(valor1);
-                    opTangente.tangente();
-                    resultatOp = opTangente.getResultadoTangente();
-                    break;*/
-
+                    Tang opTangente = new Tang(valor1);
+                    opTangente.tangent();
+                    resultatOp = opTangente.getResult();
+                    break;
                 default:
                     break;
             }
             //Segons si l'operació és d'un o de dos valors, es fa el print corresponent
         if((entradaTecladoOp > 0) && (entradaTecladoOp <= 5)) {
-            System.out.printf("El resultado de la operación " + operacion + " entre los valores: " + valor1 + ", "
-                    + valor2 + " es: " + resultatOp + "\n" + "\n");
+            System.out.printf("The result of the operation " + operacion + " between values: " + valor1 + ", "
+                    + valor2 + " is: " + resultatOp + "\n" + "\n");
         }
         else {
             if ((entradaTecladoOp > 5) && (entradaTecladoOp <= 10)) {
-                System.out.printf("El resultado de la operación " + operacion + " con el valor: " + valor1 +
-                        " es: " + resultatOp + "\n" + "\n");
+                System.out.printf("The result of the operation " + operacion + " between values: " + valor1 +
+                        " is: " + resultatOp + "\n" + "\n");
             }
-        }//Es realitza la comprobació per saber si vol fer un altre operació o finalitzar el programa
-        System.out.print("Desea realizar otra operacion? S/N" + "\n");
+        }
+        System.out.print("Do you want to do another operation? S/N" + "\n");
         Scanner entradaEscaner5 = new Scanner(System.in);
         continuar = entradaEscaner5.nextLine();
         c1 = continuar.equals("S"); c2 = continuar.equals("s"); c3 = continuar.equals("N"); c4 = continuar.equals("n");
 
         while (!c1  && !c2 && !c3 && !c4) {
-            System.out.println("Error: No ha introducido un valor correcto \n");
-            System.out.println("Desea cambiar el tipo de operación? S/N \n");
+            System.out.println("Error: Don't introduce a valid value \n");
+            System.out.println("Do you want to change the type of operation? S/N \n");
             Scanner entradaEscaner6 = new Scanner(System.in);
             continuar = entradaEscaner6.nextLine();
 
             c1 = continuar.equals("S"); c2 = continuar.equals("s"); c3 = continuar.equals("N"); c4 = continuar.equals("n");
         };
-        if (c1 || c2) { //En el cas d'haver seleccionat l'opció de tornar a fer un altre operació s/S, tornem al main, sinó (n/N) acabem el programa
+        if (c1 || c2) {
             main(actual);
         }
         else{

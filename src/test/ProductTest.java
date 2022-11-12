@@ -1,5 +1,4 @@
 package test;
-
 import junit.framework.TestCase;
 import main.controller.MockProduct;
 import org.junit.Before;

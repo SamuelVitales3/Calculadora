@@ -50,7 +50,7 @@ public class PowTest extends TestCase
         assertEquals(1.0717734, result);
     }
     @Test
-    public void testExponenteInfinty() {
+    public void testExponentInfinty() {
         Pow pow = new Pow(12,500);
         double result = pow.pow();
         boolean isInfinite;

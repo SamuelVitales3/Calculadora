@@ -4,8 +4,6 @@ import org.junit.Test;
 import main.model.Sinus;
 
 public class SinusTest extends TestCase {
-
-
     @Test
     public void testSinusConstructor(){
         Sinus sinus = new Sinus();
