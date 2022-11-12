@@ -32,8 +32,8 @@ public class ProductTest extends TestCase {
     @Test
     public void testConstructorProduct(){
         Product product = new Product(5.0, 2.9);
-        assertEquals(5.0f, product.getValor1());
-        assertEquals(2.9f, product.getValor2());
+        assertEquals(5.0, product.getValor1());
+        assertEquals(2.9, product.getValor2());
     }
 
     @Test

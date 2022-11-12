@@ -20,15 +20,15 @@ public class Main {
         return mockM.setEntradaTec(x);
     }
 
-    public float setEntradaValor1(float v1) {
+    public double setEntradaValor1(double v1) {
         return mockM.setEntradaValor1(v1);
     }
 
-    public float setEntradaValor2(float v2) {
+    public double setEntradaValor2(double v2) {
         return mockM.setEntradaValor2(v2);
     }
 
-    public float resultadoFinal(String entTec, float v1, float v2) {
+    public double resultadoFinal(String entTec, double v1, double v2) {
         return mockM.finalResult(entTec, v1, v2);
     }
 
@@ -37,9 +37,9 @@ public class Main {
     }
 
     //Funciones para mi main
-    public static void setValor1(float v1) { valor1 = v1;}
+    public static void setValor1(double v1) { valor1 = v1;}
 
-    public static void setValor2(float v2) { valor2 = v2;}
+    public static void setValor2(double v2) { valor2 = v2;}
 
     //Implementació del codi de la vista per l'usuari
     public static void main (String[] args)
@@ -112,19 +112,19 @@ public class Main {
             if((entradaTecladoOp > 0) && (entradaTecladoOp <= 5)) {
                 System.out.println("Introduce the first number of operation: \n");
                 Scanner valor1Scan = new Scanner(System.in);
-                float auxValor = valor1Scan.nextFloat();
+                double auxValor = valor1Scan.nextDouble();
                 setValor1(auxValor);
 
                 System.out.println("Introduce the second number of operation: \n");
                 Scanner valor2Scan = new Scanner(System.in);
-                float auxValor2 = valor2Scan.nextFloat();
+                double auxValor2 = valor2Scan.nextDouble();
                 setValor2(auxValor2);
             }
             else { //Determina si l'operació seleccionada requereix d'un valor
                 if ((entradaTecladoOp > 5) && (entradaTecladoOp <= 10)) {
                     System.out.println("Introduce the number of operation: \n");
                     Scanner valor1Scan = new Scanner(System.in);
-                    float auxValor1 = valor1Scan.nextFloat();
+                    double auxValor1 = valor1Scan.nextDouble();
                     setValor1(auxValor1);
                 }
             }
@@ -190,7 +190,7 @@ public class Main {
         System.out.print("Do you want to do another operation? S/N" + "\n");
         Scanner entradaEscaner5 = new Scanner(System.in);
         continuar = entradaEscaner5.nextLine();
-        c1 = continuar.equals("S"); c2 = continuar.equals("s"); c3 = continuar.equals("N"); c4 = continuar.equals("n");
+        c1 = continuar.equals("Y"); c2 = continuar.equals("y"); c3 = continuar.equals("N"); c4 = continuar.equals("n");
 
         while (!c1  && !c2 && !c3 && !c4) {
             System.out.println("Error: Don't introduce a valid value \n");
@@ -198,7 +198,7 @@ public class Main {
             Scanner entradaEscaner6 = new Scanner(System.in);
             continuar = entradaEscaner6.nextLine();
 
-            c1 = continuar.equals("S"); c2 = continuar.equals("s"); c3 = continuar.equals("N"); c4 = continuar.equals("n");
+            c1 = continuar.equals("Y"); c2 = continuar.equals("y"); c3 = continuar.equals("N"); c4 = continuar.equals("n");
         };
         if (c1 || c2) {
             main(actual);

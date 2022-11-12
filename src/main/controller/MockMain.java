@@ -1,8 +1,8 @@
 package main.controller;
 public interface MockMain {
     public String setEntradaTec(int x);
-    public float setEntradaValor1(float v1);
-    public float setEntradaValor2(float v2);
-    public float finalResult(String entTec, float v1, float v2);
+    public double setEntradaValor1(double v1);
+    public double setEntradaValor2(double v2);
+    public double finalResult(String entTec, double v1, double v2);
 
 }
