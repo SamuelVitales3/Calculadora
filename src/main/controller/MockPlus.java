@@ -1,5 +1,5 @@
 package main.controller;
 
-public interface MockSum {
+public interface MockPlus {
     public double auxiliarSum(double x, double y);
 }

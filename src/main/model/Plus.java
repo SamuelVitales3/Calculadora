@@ -1,9 +1,9 @@
 package main.model;
-import main.controller.MockSum;
+import main.controller.MockPlus;
 import main.controller.AritmeticOperation;
 
 public class Plus extends AritmeticOperation {
-    MockSum mockS;
+    MockPlus mockS;
     public Plus(){
         super();
     }

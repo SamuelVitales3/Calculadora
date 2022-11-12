@@ -1,5 +1,5 @@
 package test;
-import main.controller.MockSum;
+import main.controller.MockPlus;
 import main.model.Plus;
 import junit.framework.TestCase;
 import org.junit.Before;
@@ -15,7 +15,7 @@ public class PlusTest extends TestCase {
     @InjectMocks
     Plus s = new Plus();
     @Mock
-    MockSum sM;
+    MockPlus sM;
     @Before
     public void init(){
         when(sM.auxiliarSum(5.0, 5.0)).thenReturn(10.0);

@@ -3,7 +3,7 @@ import main.controller.MockMain;
 import main.model.Minus;
 import main.model.Plus;
 import main.model.Product;
-
+import main.model.Divide;
 import java.util.Scanner;
 
 public class Main {
@@ -78,18 +78,18 @@ public class Main {
         System.out.println(seleccion);
         setEntradaTecladoOp1(seleccion);
         //Definim l'operació escollida per l'usuari
-        operacion = switch (entradaTecladoOp) {
-            case 1 -> "Suma";
-            case 2 -> "Resta";
-            case 3 -> "Multiplicación";
-            case 4 -> "División";
-            case 5 -> "Potencia";
-            case 6 -> "Logaritmo";
-            case 7 -> "Exponencial";
-            case 8 -> "Sinus";
-            case 9 -> "Cosinus";
-            case 10 -> "Tangente";
-            default -> "Error: No ha introducido un valor correcto";
+        switch (entradaTecladoOp) {
+            case 1 : operacion =  "Suma";
+            case 2 : operacion = "Resta";
+            case 3 : operacion = "Multiplicación";
+            case 4 : operacion = "División";
+            case 5 : operacion =  "Potencia";
+            case 6 : operacion =  "Logaritmo";
+            case 7 : operacion =  "Exponencial";
+            case 8 : operacion =  "Sinus";
+            case 9 : operacion =  "Cosinus";
+            case 10 : operacion = "Tangente";
+            default : operacion =  "Error: No ha introducido un valor correcto";
         };
         System.out.println("Ha seleccionado: " + entradaTecladoOp + " - " + operacion + "\n");
         //Print per canviar el tipus d'operació
@@ -154,7 +154,7 @@ public class Main {
                     resultatOp = opMultiplicacion.getResult();
                     break;
 
-                case 4:
+                /*case 4:
                     Divide opDivision = new Division(valor1, valor2);
                     opDivision.division();
                     resultatOp = opDivision.getResultado();
@@ -194,7 +194,7 @@ public class Main {
                     Tangente opTangente = new Tangente(valor1);
                     opTangente.tangente();
                     resultatOp = opTangente.getResultadoTangente();
-                    break;
+                    break;*/
 
                 default:
                     break;
