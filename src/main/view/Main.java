@@ -47,7 +47,7 @@ public class Main {
         String[] actual = new String[0];
         //Print Menú
         System.out.println("        Calculadora     \n ");
-        System.out.println("Introduce the operetation that you want to do:");
+        System.out.println("Introduce the operation that you want to do:");
         System.out.println("1 - Plus");
         System.out.println("2 - Minus");
         System.out.println("3 - Product");
@@ -97,10 +97,10 @@ public class Main {
         c4 = continuar.equals("n");
         while (!c1  && !c2 && !c3 && !c4) {
             System.out.println("Error: Don't introduce valid answer \n");
-            System.out.println("Do you want to change the operation? S/N \n");
+            System.out.println("Do you want to change the operation? Y/N \n");
             Scanner entradaEscaner4 = new Scanner(System.in);
             continuar = entradaEscaner4.nextLine();
-            c1 = continuar.equals("S"); c2 = continuar.equals("s"); c3 = continuar.equals("N"); c4 = continuar.equals("n");
+            c1 = continuar.equals("Y"); c2 = continuar.equals("y"); c3 = continuar.equals("N"); c4 = continuar.equals("n");
         };
         //float valor1 = 0, valor2 = 0;
         double resultatOp = 0;
@@ -187,14 +187,14 @@ public class Main {
                         " is: " + resultatOp + "\n" + "\n");
             }
         }
-        System.out.print("Do you want to do another operation? S/N" + "\n");
+        System.out.print("Do you want to do another operation? Y/N" + "\n");
         Scanner entradaEscaner5 = new Scanner(System.in);
         continuar = entradaEscaner5.nextLine();
         c1 = continuar.equals("Y"); c2 = continuar.equals("y"); c3 = continuar.equals("N"); c4 = continuar.equals("n");
 
         while (!c1  && !c2 && !c3 && !c4) {
             System.out.println("Error: Don't introduce a valid value \n");
-            System.out.println("Do you want to change the type of operation? S/N \n");
+            System.out.println("Do you want to change the type of operation? Y/N \n");
             Scanner entradaEscaner6 = new Scanner(System.in);
             continuar = entradaEscaner6.nextLine();
 
