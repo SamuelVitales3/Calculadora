@@ -13,6 +13,7 @@ public class TangTest extends TestCase {
     public void testTangConstructor(){
         Tang tang = new Tang();
         assertEquals(0.0, tang.getValor1());
+        assertEquals(0.0, tang.getValor2());
         assertEquals(0.0, tang.getResult());
     }
 

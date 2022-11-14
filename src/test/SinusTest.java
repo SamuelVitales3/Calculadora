@@ -8,6 +8,7 @@ public class SinusTest extends TestCase {
     public void testSinusConstructor(){
         Sinus sinus = new Sinus();
         assertEquals(0.0, sinus.getValor1());
+        assertEquals(0.0, sinus.getValor2());
         assertEquals(0.0, sinus.getResult());
     }
 

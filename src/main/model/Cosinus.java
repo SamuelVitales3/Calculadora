@@ -9,7 +9,10 @@ public class Cosinus extends AritmeticOperation{
     }
 
     public double cosinus() {
-        result = Math.cos(Math.toRadians(valor1));
+        if(valor1 == 0 || valor1 == 180)
+            result = Math.cos(Math.toRadians(valor1));
+        else
+            result = Math.floor(Math.cos(Math.toRadians(valor1))*10)/100;
         return result;
     }
 }
