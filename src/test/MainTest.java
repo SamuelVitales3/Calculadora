@@ -21,9 +21,9 @@ public class MainTest extends TestCase {
     MockMain mM;
     @Before
     public void init() { // Modifiquem els comportaments als que nosaltres volem
-        when(mM.setEntradaTec(1)).thenReturn("Plus");
-        when(mM.setEntradaValor1(1)).thenReturn(1.0);
-        when(mM.setEntradaValor2(2)).thenReturn(2.0);
+        when(mM.inputTeclado(1)).thenReturn("Plus");
+        when(mM.setInput1(1)).thenReturn(1.0);
+        when(mM.setInput2(2)).thenReturn(2.0);
         when(mM.finalResult("Plus",1.0,2.0)).thenReturn(3.0);
     }
     @Test

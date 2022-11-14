@@ -17,15 +17,15 @@ public class Main {
     }
     //Funciones para el mock
     public String inputTeclado(int x) {
-        return mockM.setEntradaTec(x);
+        return mockM.inputTeclado(x);
     }
 
     public double setInput1(double v1) {
-        return mockM.setEntradaValor1(v1);
+        return mockM.setInput1(v1);
     }
 
     public double setInput2(double v2) {
-        return mockM.setEntradaValor2(v2);
+        return mockM.setInput2(v2);
     }
 
     public double finalResult(String entTec, double v1, double v2) {
