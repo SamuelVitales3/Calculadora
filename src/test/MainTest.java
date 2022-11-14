@@ -1,7 +1,6 @@
 package test;
 
 import main.controller.MockMain;
-import main.view.Main;
 import junit.framework.TestCase;
 import org.junit.Before;
 import org.junit.Test;
@@ -9,6 +8,11 @@ import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
+import main.view.Main;
+
+
+import java.lang.reflect.Method;
+
 import static org.mockito.Mockito.*;
 
 @RunWith(MockitoJUnitRunner.class)

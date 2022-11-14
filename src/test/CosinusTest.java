@@ -1,6 +1,5 @@
 package test;
 import junit.framework.TestCase;
-import main.model.Divide;
 import org.junit.Test;
 import main.model.Cosinus;
 
@@ -16,6 +15,10 @@ public class CosinusTest extends TestCase{
     public void testConstructor(){
         Cosinus cosinusVar = new Cosinus(3.14);
         assertEquals(3.14, cosinusVar.getValor1());
+        assertEquals(0.0, cosinusVar.getValor2());
+        assertEquals(0.0, cosinusVar.getResult());
+
+
     }
 
     @Test
