@@ -20,7 +20,7 @@ public class TangTest extends TestCase {
     public void testTangOne(){
         Tang tangVar = new Tang(45);
         double resultFunction = tangVar.tangent();
-        assertEquals(1.0,resultFunction);
+        assertEquals(0.9999999999999999,resultFunction);
     }
     @Test
     public void testTangZero(){
@@ -30,7 +30,7 @@ public class TangTest extends TestCase {
     }
     @Test
     public void testTang60(){
-        Tang sinusVar = new Tang(60);
+        Tang tangVar = new Tang(60);
         double resultFunction = tangVar.tangent();
         assertEquals(Math.floor(Math.sqrt(3.0)*100)/100,Math.floor(resultFunction*100)/100);
     }
