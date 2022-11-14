@@ -27,7 +27,7 @@ public class MainTest extends TestCase {
         when(mM.finalResult("Plus",1.0,2.0)).thenReturn(3.0);
     }
     @Test
-    public void mockEntradaTeclado() {
+    public void mockInputMain() {
         String entradaTecladoOp = s.inputTeclado(1); //entradaTecladoOp té "Suma"
         double valor1 = s.setInput1(1); //valor1 té 1.0;
         double valor2 = s.setInput2(2); //valor2 té 2.0;
