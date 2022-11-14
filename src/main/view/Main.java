@@ -5,35 +5,35 @@ import main.model.*;
 import java.util.Scanner;
 
 public class Main {
-    static int entradaTecladoOp;
+    static int anInt;
     MockMain mockM;
     static double valor1;
     static double valor2;
 
     public Main() {
-        entradaTecladoOp = 0;
+        anInt = 0;
         valor1 = 0;
         valor2 = 0;
     }
     //Funciones para el mock
-    public String setEntradaTecladoOp(int x) {
+    public String inputTeclado(int x) {
         return mockM.setEntradaTec(x);
     }
 
-    public double setEntradaValor1(double v1) {
+    public double setInput1(double v1) {
         return mockM.setEntradaValor1(v1);
     }
 
-    public double setEntradaValor2(double v2) {
+    public double setInput2(double v2) {
         return mockM.setEntradaValor2(v2);
     }
 
-    public double resultadoFinal(String entTec, double v1, double v2) {
+    public double finalResult(String entTec, double v1, double v2) {
         return mockM.finalResult(entTec, v1, v2);
     }
 
-    public static void setEntradaTecladoOp1(int x) {
-        entradaTecladoOp = x;
+    public static void setInputOp1(int x) {
+        anInt = x;
     }
 
     //Funciones para mi main
@@ -62,18 +62,18 @@ public class Main {
         //Introducció d'un valor per l'usuari per indicar quina operació fer
         Scanner entradaEscaner = new Scanner(System.in);
         seleccion = entradaEscaner.nextInt();
-        setEntradaTecladoOp1(seleccion);
+        setInputOp1(seleccion);
         // Comprovem que s'ha introduït un valor correcte
-        while ((entradaTecladoOp > 10) || (entradaTecladoOp < 1))
+        while ((anInt > 10) || (anInt < 1))
         {
             System.out.println("Error: Introduce a number between 1 and 10");
             Scanner entradaEscaner2 = new Scanner(System.in);
             seleccion = entradaEscaner2.nextInt();
         }
         System.out.println(seleccion);
-        setEntradaTecladoOp1(seleccion);
+        setInputOp1(seleccion);
         //Definim l'operació escollida per l'usuari
-        switch (entradaTecladoOp) {
+        switch (anInt) {
             case 1 : operacion =  "Plus";
             case 2 : operacion = "Minus";
             case 3 : operacion = "Product";
@@ -84,7 +84,7 @@ public class Main {
             case 8 : operacion = "Tangent";
             default : operacion =  "Error: Don't introduce a valid number";
         };
-        System.out.println("Has selected: " + entradaTecladoOp + " - " + operacion + "\n");
+        System.out.println("Has selected: " + anInt + " - " + operacion + "\n");
         //Print per canviar el tipus d'operació
         System.out.println("Do you want to change the operation? Y/N \n");
         Scanner entradaEscaner3 = new Scanner(System.in);
@@ -109,7 +109,7 @@ public class Main {
             main(actual);
         } //En cas d'haver premut n/N, continuem amb l'execució
         else {
-            if((entradaTecladoOp > 0) && (entradaTecladoOp <= 5)) {
+            if((anInt > 0) && (anInt <= 5)) {
                 System.out.println("Introduce the first number of operation: \n");
                 Scanner valor1Scan = new Scanner(System.in);
                 double auxValor = valor1Scan.nextDouble();
@@ -121,14 +121,14 @@ public class Main {
                 setValor2(auxValor2);
             }
             else { //Determina si l'operació seleccionada requereix d'un valor
-                if ((entradaTecladoOp > 5) && (entradaTecladoOp <= 10)) {
+                if ((anInt > 5) && (anInt <= 10)) {
                     System.out.println("Introduce the number of operation: \n");
                     Scanner valor1Scan = new Scanner(System.in);
                     double auxValor1 = valor1Scan.nextDouble();
                     setValor1(auxValor1);
                 }
             }
-            switch(entradaTecladoOp) {
+            switch(anInt) {
                 case 1:
                     Plus opSuma = new Plus(valor1, valor2);
                     opSuma.plus();
@@ -177,12 +177,12 @@ public class Main {
                     break;
             }
             //Segons si l'operació és d'un o de dos valors, es fa el print corresponent
-        if((entradaTecladoOp > 0) && (entradaTecladoOp <= 5)) {
+        if((anInt > 0) && (anInt <= 5)) {
             System.out.printf("The result of the operation " + operacion + " between values: " + valor1 + ", "
                     + valor2 + " is: " + resultatOp + "\n" + "\n");
         }
         else {
-            if ((entradaTecladoOp > 5) && (entradaTecladoOp <= 10)) {
+            if ((anInt > 5) && (anInt <= 10)) {
                 System.out.printf("The result of the operation " + operacion + " between values: " + valor1 +
                         " is: " + resultatOp + "\n" + "\n");
             }

@@ -11,8 +11,6 @@ import org.mockito.runners.MockitoJUnitRunner;
 import main.view.Main;
 
 
-import java.lang.reflect.Method;
-
 import static org.mockito.Mockito.*;
 
 @RunWith(MockitoJUnitRunner.class)
@@ -26,14 +24,14 @@ public class MainTest extends TestCase {
         when(mM.setEntradaTec(1)).thenReturn("Plus");
         when(mM.setEntradaValor1(1)).thenReturn(1.0);
         when(mM.setEntradaValor2(2)).thenReturn(2.0);
-        when(mM.finalResult("Plus",1.0f,2.0f)).thenReturn(3.0);
+        when(mM.finalResult("Plus",1.0,2.0)).thenReturn(3.0);
     }
     @Test
     public void mockEntradaTeclado() {
-        String entradaTecladoOp = s.setEntradaTecladoOp(1); //entradaTecladoOp té "Suma"
-        double valor1 = s.setEntradaValor1(1); //valor1 té 1.0;
-        double valor2 = s.setEntradaValor2(2); //valor2 té 2.0;
-        double resultadoFinal = s.resultadoFinal(entradaTecladoOp, valor1, valor2); // resultadoFinal té 3.0
+        String entradaTecladoOp = s.inputTeclado(1); //entradaTecladoOp té "Suma"
+        double valor1 = s.setInput1(1); //valor1 té 1.0;
+        double valor2 = s.setInput2(2); //valor2 té 2.0;
+        double resultadoFinal = s.finalResult(entradaTecladoOp, valor1, valor2); // resultadoFinal té 3.0
         assertEquals("Plus",entradaTecladoOp);
         assertEquals(1.0,valor1);
         assertEquals(2.0,valor2);
