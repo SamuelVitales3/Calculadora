@@ -12,8 +12,7 @@ public class Divide extends AritmeticOperation{
     }
 
     public Double divide(){
-        if ((valor1 != 0 && valor2 == 0.0) || (valor1 == 0 && valor2 == 0)
-                || (valor1 == 1 && valor2 == 0)) {
+        if (valor1 != 0 && valor2 == 0 || valor1 == 0 && valor2 == 0) {
             throw new IllegalArgumentException("We couldn't do this operation");
         } else {
             return valor1 / valor2;
