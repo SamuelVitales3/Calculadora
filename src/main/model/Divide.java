@@ -11,7 +11,7 @@ public class Divide extends AritmeticOperation{
         this.valor2 = y;
     }
 
-    public Double divide(){
+    public double divide(){
         if (valor1 != 0 && valor2 == 0 || valor1 == 0 && valor2 == 0) {
             throw new IllegalArgumentException("We couldn't do this operation");
         } else {
