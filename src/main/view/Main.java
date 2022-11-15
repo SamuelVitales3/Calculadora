@@ -74,14 +74,14 @@ public class Main {
         setInputOp1(seleccion);
         //Definim l'operació escollida per l'usuari
         switch (anInt) {
-            case 1 : operacion =  "Plus";
-            case 2 : operacion = "Minus";
-            case 3 : operacion = "Product";
-            case 4 : operacion = "Division";
-            case 5 : operacion =  "Pow";
-            case 6 : operacion =  "Sinus";
-            case 7 : operacion =  "Cosinus";
-            case 8 : operacion = "Tangent";
+            case 1 : operacion =  "Plus";break;
+            case 2 : operacion = "Minus";break;
+            case 3 : operacion = "Product";break;
+            case 4 : operacion = "Division";break;
+            case 5 : operacion =  "Pow";break;
+            case 6 : operacion =  "Sinus";break;
+            case 7 : operacion =  "Cosinus";break;
+            case 8 : operacion = "Tangent";break;
             default : operacion =  "Error: Don't introduce a valid number";
         };
         System.out.println("Has selected: " + anInt + " - " + operacion + "\n");
